@@ -12,6 +12,7 @@ def order(request):
             note = 'Thanks for ordering! Your %s %s and %s pizza is on its way!' %(filled_form.cleaned_data['size'],
             filled_form.cleaned_data['topping1'],
             filled_form.cleaned_data['topping2'],)
+        else:
             New_form = PizzaForm()
             return render(request, 'pizza/order.html', {'pizzaform':New_form, 'note':note})
     else:
