@@ -9,9 +9,9 @@ def order(request):
     if request.method == 'POST':
         filled_form = PizzaForm(request.POST)
         if filled_form.is_valid():
-            note = 'Thanks for ordering! You %s %s and %s pizza is on its way!' %(filled_form.cleaned_data['size'],
+            note = 'Thanks for ordering! Your %s %s and %s pizza is on its way!' %(filled_form.cleaned_data['size'],
             filled_form.cleaned_data['topping1'],
-            filled_form.cleaned_data['topping2'])
+            filled_form.cleaned_data['topping2'],)
             New_form = PizzaForm()
             return render(request, 'pizza/order.html', {'pizzaform':New_form, 'note':note})
     else:
