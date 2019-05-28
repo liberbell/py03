@@ -4,7 +4,7 @@ from .models import Pizza
 class PizzaForm(forms.Form):
     # topping1 = forms.CharField(label='Topping 1', max_length=100, widget=forms.PasswordInput)
     # topping2 = forms.CharField(label='Topping 2', max_length=100)
-    toppings = forms.MultipleChoiseField(choices=[('pep',Pepperoni),('cheese','Cheese'),('olives','Olives'),('onion','Onion')])
+    toppings = forms.MultipleChoiceField(choices=[('pep','Pepperoni'),('cheese','Cheese'),('olives','Olives'),('onion','Onion')])
     size = forms.ChoiceField(label='Size', choices=[('Small', 'Small'), ('Medium', 'Medium'), ('Large', 'Large'), ('Extra Large', 'Extra Large')])
 
 # class PizzaForm(forms.ModelForm):
