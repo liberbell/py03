@@ -12,4 +12,4 @@ class PizzaForm(forms.ModelForm):
         model = Pizza
         fields = ['topping1', 'topping2', 'size']
         labels = {'topping1':'Topping 1', 'topping2':'Topping 2'}
-        widgets = {'topping1':forms.Textarea}
+        widgets = {'size':forms.CheckboxSelectMultiple}
