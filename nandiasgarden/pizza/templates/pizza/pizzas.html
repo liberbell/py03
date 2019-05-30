@@ -5,7 +5,7 @@
   {% csrf_token %}
   {{ formset.management_form }}
 
-  {% for form %}
+  {% for form in formset %}
 
 </form>
 <a href="{% url 'pizzas' %}">Order a Multiple pizzas</a>
