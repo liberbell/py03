@@ -19,4 +19,4 @@ def order(request):
 
     else:
         form = PizzaForm()
-        return render(request, 'pizza/order.html', {'pizzaform':form})
+        return render(request, 'pizza/order.html', {'pizzaform':form, 'multiple_form':multiple_form})
