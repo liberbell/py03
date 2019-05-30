@@ -8,4 +8,15 @@
   <input type="submit" value="Order Pizza">
 </form>
 
+<br><br>
+
+Wnat more than one Pizza?
+
+<form action="{% url 'pizzas' %}" method="get">
+  {% csrf_token %}
+  {{ pizzaform }}
+  <input type="submit" value="Order Pizza">
+</form>
+
+
 <a href="{% url 'home' %}">Back to Home</a>
