@@ -1,2 +1,11 @@
-<h1>Nandian`s Garden</h1>
+<h1>Order pizzas</h1>
+<h2>{{ note }}</h2>
+
+<form action="{% url 'pizzas' %}" method="post">
+  {% csrf_token %}
+  {{ formset.management_form }}
+
+  {% for form %}
+
+</form>
 <a href="{% url 'pizzas' %}">Order a Multiple pizzas</a>
