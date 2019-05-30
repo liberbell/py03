@@ -39,4 +39,4 @@ def pizzas(self):
         else:
             note = 'Order was not created. please try again.'
 
-    return render(request, 'pizza/pizzas.html')
+        return render(request, 'pizza/pizzas.html',{'note':note, 'formset':formset})
