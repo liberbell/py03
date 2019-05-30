@@ -6,6 +6,10 @@
   {{ formset.management_form }}
 
   {% for form in formset %}
+  {{ form }}
+  <br><br>
+  {% endfor %}
+  <input type="submit" value="Order Pizzas">
 
 </form>
 <a href="{% url 'pizzas' %}">Order a Multiple pizzas</a>
