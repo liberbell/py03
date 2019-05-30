@@ -27,3 +27,4 @@ def pizzas(self):
     filled_multiple_pizza_form = MultiplePizzaForm(request.GET)
     if filled_multiple_pizza_form.is_valid():
         number_of_pizzas = filled_multiple_pizza_form.cleaned_data['number']
+    PizzaFormSet = formset_factory(PizzaForm, extra=number_of_pizzas)
