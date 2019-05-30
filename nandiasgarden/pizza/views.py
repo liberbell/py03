@@ -29,4 +29,8 @@ def pizzas(self):
         number_of_pizzas = filled_multiple_pizza_form.cleaned_data['number']
     PizzaFormSet = formset_factory(PizzaForm, extra=number_of_pizzas)
 
+    formset = PizzaFormSet()
+    if request.method == 'POST':
+        
+
     return render(request, 'pizza/pizzas.html')
