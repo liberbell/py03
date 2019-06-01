@@ -9,8 +9,9 @@ def home(request):
 def order(request):
     multiple_form = MultiplePizzaForm()
     if request.method == 'POST':
-        # filled_form = PizzaForm(request.POST)
+        filled_form = PizzaForm(request.POST)
         if filled_form.is_valid():
+            created_pizza = filled_form.save()
             filled_form.save()
             note = 'Thanks for ordering! Your %s %s and %s pizza is on its way!' %(filled_form.cleaned_data['size'],
             filled_form.cleaned_data['topping1'],
