@@ -56,4 +56,5 @@ def edit_order(request, pk):
         if filled_form.is_valid():
             filled_form.save()
             form = filled_form
+            note = 'Order has been updated.'
     return render(request, 'pizza/edit_order.html',{'pizzaform':form, 'pizza':pizza})
