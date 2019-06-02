@@ -13,7 +13,7 @@ def order(request):
         if filled_form.is_valid():
             created_pizza = filled_form.save()
             created_pizza_pk = create_pizza.id
-            filled_form.save()
+            # filled_form.save()
             note = 'Thanks for ordering! Your %s %s and %s pizza is on its way!' %(filled_form.cleaned_data['size'],
             filled_form.cleaned_data['topping1'],
             filled_form.cleaned_data['topping2'],)
