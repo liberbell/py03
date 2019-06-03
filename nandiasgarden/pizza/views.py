@@ -18,8 +18,8 @@ def order(request):
             note = 'Thanks for ordering! Your %s %s and %s pizza is on its way!' %(filled_form.cleaned_data['size'],
             filled_form.cleaned_data['topping1'],
             filled_form.cleaned_data['topping2'],)
-            print(note)
-            new_form = PizzaForm()
+            # print(note)
+            filled_form = PizzaForm()
         else:
             created_pizza_pk = None
             note = 'Pizza order has failed. Try again.'
