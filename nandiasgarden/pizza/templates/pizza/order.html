@@ -15,9 +15,8 @@
   {{ pizzaform.topping2 }}
   {{ pizzaform.topping2.errors }}
   <label for="{{ pizzaform.size.id_for_label }}">Size:</label>
-    {{ pizzaform.label }}
-    {{ pizzaform.errors }}
-
+  {{ pizzaform.size }}
+  {{ pizzaform.size.errors }}
   <input type="submit" value="Order Pizza">
 </form>
 
