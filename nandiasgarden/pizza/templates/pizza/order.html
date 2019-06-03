@@ -8,9 +8,9 @@
 
 <form action="{% url 'order' %}" method="post">
   {% csrf_token %}
-  {{ pizzaform.topping1.errors }}
   {{ pizzaform.topping1.lable_tag }}
   {{ pizzaform.topping1 }}
+  {{ pizzaform.topping1.errors }}
   <input type="submit" value="Order Pizza">
 </form>
 
