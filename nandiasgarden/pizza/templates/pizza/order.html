@@ -24,9 +24,11 @@
       {% csrf_token %}
 
       {% for field in pizzaform %}
+      <div class="form-group">
       {{ field.errors }}
       {{ field.label_tag }}
       {% render_field field class="form-control" %}
+      </div>
       {% endfor %}
       <input type="submit" value="Order Pizza">
     </form>
