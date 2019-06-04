@@ -12,6 +12,9 @@
   </head>
   <body>
     {% load widget_tweaks %}
+
+    <div class="container">
+
     <h1>Order a Pizza</h1>
 
     <h2>{{ note }}</h2>
@@ -42,6 +45,7 @@
       {{ multiple_form }}
       <input type="submit" value="Get Pizzas">
     </form>
+    </div>
 
 
     <a href="{% url 'home' %}">Back to Home</a>
