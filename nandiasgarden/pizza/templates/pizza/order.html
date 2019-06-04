@@ -45,30 +45,3 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
   </body>
 </html>
-
-<h1>Order a Pizza</h1>
-
-<h2>{{ note }}</h2>
-{% if created_pizza_pk %}
-<a href="{% url 'edit_order' created_pizza_pk %}">Edit your order</a>
-{% endif %}
-
-
-<form action="{% url 'order' %}" method="post">
-  {% csrf_token %}
-  {{ pizzaform }}
-  <input type="submit" value="Order Pizza">
-</form>
-
-<br><br>
-
-Wnat more than one Pizza?
-
-<form action="{% url 'pizzas' %}" method="get">
-  <!-- {% csrf_token %} -->
-  {{ multiple_form }}
-  <input type="submit" value="Get Pizzas">
-</form>
-
-
-<a href="{% url 'home' %}">Back to Home</a>
