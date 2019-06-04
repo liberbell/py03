@@ -22,7 +22,9 @@
 
     <form action="{% url 'order' %}" method="post">
       {% csrf_token %}
-      {{ pizzaform }}
+
+      {% for field in pizzaform %}
+      {% endfor %}
       <input type="submit" value="Order Pizza">
     </form>
 
