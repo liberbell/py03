@@ -1,6 +1,8 @@
 {% extends 'pizza/base.html' %}
 {% block 'body' %}
 
+<div class="container">
+
 <h1>Order pizzas</h1>
 <h2>{{ note }}</h2>
 
@@ -17,4 +19,5 @@
 
 </form>
 <a href="{% url 'pizzas' %}">Order a Multiple pizzas</a>
+</div>
 {% endblock %}
