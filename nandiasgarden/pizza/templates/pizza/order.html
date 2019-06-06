@@ -11,7 +11,9 @@
     <title>Nandians Garden</title>
   </head>
   <body>
-    {% load widget_tweaks %}
+  {% extends 'pizza/base.html' %}
+  {% block 'body' %}
+  {% load widget_tweaks %}
 
     <div class="container">
 
@@ -50,6 +52,7 @@
 
     <a href="{% url 'home' %}">Back to Home</a>
     </div>
+  {% endblock %}
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
